@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <title>filebed</title>
+    <link rel="shortcut icon" href="/static/imgs/cat1.png" />
+    <link rel="stylesheet" href="/static/main.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <div class="menu_front">
+                <div class="container flex-between">
+                    <div class="flex-center left">
+                        <a id="LogoLink" href="/" title="gmtest" class="nuxt-link-active">
+                            <img id="logoLeft" src="/static/imgs/cat2.png" alt="cat">
+                            <img id="logoRight" src="/static/imgs/cat1.png" alt="gmtest" data-v-74172461=""> <img src="https://blog.cattalk.in/usr/uploads/2020/04/3094488233.jpeg" alt="gmtest" style="display:none;"></a>
+                    </div>
+                    <div class="middle">
+                        <div class="nav-item flex-center">
+                            <div class="nav-hover-wrapper flex-center">
+                                <a href="/" class="item nuxt-link-exact-active nuxt-link-active">首页</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="container">
+                <h1>filebed</h1>
+                <div class="sectors">
+                    <div class="sector">
+                        <div class="sector">
+                            <h2>综合</h2>
+                            <div class="links">
+                                <a href="/static/html/regexper.htm" target="_blank" class="link"><img src="https://aoxiaoqiang.github.io/reg/favicon.ico" alt="">
+                                    <div class="info">
+                                        <h3>Regexper</h3>
+                                        <p>正则可视化工具</p>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://www.layuicdn.com/layui/layui.js" charset="utf-8"></script>
+        <script>
+        layui.use(['form', 'layedit', 'laydate', 'upload'], function() {
+            var form = layui.form,
+                layer = layui.layer,
+                layedit = layui.layedit,
+                upload = layui.upload,
+                $ = layui.jquery;
+
+            var baseURL = document.location.origin;
+
+            var LOGOIMG1 = '/static/imgs/cat1.png';
+            var LOGOIMG2 = '/static/imgs/cat2.png';
+
+            $('#LogoLink').mouseover(function() {
+                $('#logoLeft').attr('src', LOGOIMG1);
+                $('#logoRight').attr('src', LOGOIMG2);
+            })
+            $('#LogoLink').mouseout(function() {
+                $('#logoLeft').attr('src', LOGOIMG2);
+                $('#logoRight').attr('src', LOGOIMG1);
+            })
+
+        });
+        </script>
+</body>
+
+</html>

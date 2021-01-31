@@ -5,10 +5,12 @@ import (
     "github.com/gofiber/fiber/v2"
 )
 
-
 func HomePage(c *fiber.Ctx) error {
-    return c.SendString("Hello, World 👋!")
+    return c.Render("index", fiber.Map{
+        "title": "Hello, World!",
+    })
 }
+
 
 func UploadAPI(c *fiber.Ctx) error {
     file, err := c.FormFile("document")
