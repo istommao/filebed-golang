@@ -7,6 +7,7 @@ type Config struct {
     Host string
     Port string
     Prefork bool
+    Domain string
 }
 
 
@@ -20,6 +21,7 @@ func InitConfigure() *Config {
 
     v.SetDefault("Host", "127.0.0.1")
     v.SetDefault("Port", "3750")
+    v.SetDefault("Domain", "127.0.0.1:3750")
     v.SetDefault("Prefork", true)
 
     err := v.ReadInConfig()
@@ -31,6 +33,8 @@ func InitConfigure() *Config {
         }
     }
     v.Unmarshal(&config)
+
+    config.Domain = config.Host + ":" + config.Port
 
     return &config
 }
