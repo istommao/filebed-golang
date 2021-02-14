@@ -13,6 +13,7 @@ func main() {
     conf := config.InitConfigure()
 
 	engine := html.NewFileSystem(pkger.Dir("/templates"), ".html")
+    engine.Reload(conf.HtmlReload)
 
     fiberConf := fiber.Config {
         Prefork: conf.Prefork,

@@ -7,7 +7,9 @@ import (
 
 
 func Register(app *fiber.App) {
-    app.Get("/", apis.HomePage)
+    app.Get("/", apis.IndexPage)
+    app.Get("/home/", apis.HomePage)
+    app.Get("/files/", apis.MediaPage)
 
     app.Static("/static", "./static")
 

@@ -8,6 +8,7 @@ type Config struct {
     Port string
     Prefork bool
     Domain string
+    HtmlReload bool
 }
 
 
@@ -23,6 +24,7 @@ func InitConfigure() *Config {
     v.SetDefault("Port", "3750")
     v.SetDefault("Domain", "127.0.0.1:3750")
     v.SetDefault("Prefork", true)
+    v.SetDefault("HtmlReload", false)
 
     err := v.ReadInConfig()
     if err != nil {
