@@ -9,6 +9,7 @@ type Config struct {
     Prefork bool
     Domain string
     HtmlReload bool
+    BodyLimit int
 }
 
 
@@ -25,6 +26,7 @@ func InitConfigure() *Config {
     v.SetDefault("Domain", "127.0.0.1:3750")
     v.SetDefault("Prefork", true)
     v.SetDefault("HtmlReload", false)
+    v.SetDefault("BodyLimit", 4 * 1024 * 1024)
 
     err := v.ReadInConfig()
     if err != nil {

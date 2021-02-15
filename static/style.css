@@ -117,7 +117,14 @@ section {
 }
 
 body {
-    font-family: arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, Source Sans Pro, BlinkMacSystemFont, PingFang SC, Helvetica, Tahoma, Arial, Hiragino Sans GB, Microsoft YaHei, "\5FAE\8F6F\96C5\9ED1", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #303659;
+    -webkit-font-smoothing: antialiased;
 }
 
 ol,
@@ -173,7 +180,7 @@ table {
 }
 
 #uploader .queueList {
-    margin: 20px;
+    margin-bottom: 80px;
 }
 
 .element-invisible {
@@ -190,12 +197,12 @@ table {
     text-align: center;
     background: url(./image.png) center 93px no-repeat;
     color: #cccccc;
-    font-size: 18px;
+    font-size: 14px;
     position: relative;
 }
 
 #uploader .placeholder .webuploader-pick {
-    font-size: 18px;
+    font-size: 14px;
     /*background: #00b7ee;*/
     background: #00c3ff;
     border-radius: 3px;

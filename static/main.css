@@ -177,7 +177,7 @@
         line-height: 1.8;
     }
 
-    a {
+/*    a {
         cursor: pointer;
         outline: none;
         display: -webkit-box;
@@ -186,7 +186,7 @@
         align-items: center;
         -webkit-box-pack: center;
         justify-content: center;
-    }
+    }*/
 
     .page .container .links:after {
         content: "";

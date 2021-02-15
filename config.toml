@@ -6,3 +6,6 @@ port = 3650
 prefork = false
 
 HtmlReload = true
+
+# 50 MB
+BodyLimit = 52428800

@@ -21,6 +21,7 @@ func main() {
         StrictRouting: true,
         CaseSensitive: true,
         Views: engine,
+        BodyLimit: conf.BodyLimit,
     }
 
     app := fiber.New(fiberConf)
